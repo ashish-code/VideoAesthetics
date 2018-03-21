@@ -59,8 +59,8 @@ def timelimit(timeout):
             c.join(timeout)
             if c.isAlive():
                 raise TimeoutError
-            if c.error:
-                raise c.error
+            # if c.error:
+            #     raise c.error
             return c.result
 
         return internal2
